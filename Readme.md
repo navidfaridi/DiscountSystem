@@ -126,9 +126,8 @@ All core logic and validation are covered by unit tests using **xUnit** and **Mo
 
 ## 📦 Future Improvements
 
-- Add **gRPC** or **REST endpoints** for alternative transport layers  
-- Introduce **rate limiting and monitoring** (e.g., Prometheus, OpenTelemetry)  
-- Implement **distributed transactions** for multi-node consistency  
+- Add **gRPC** for alternative transport layers  
+- Introduce **rate limiting and monitoring** (e.g., Prometheus, OpenTelemetry) 
 - Add **Docker Compose** for local setup (SQL Server + Redis)
 
 ---
