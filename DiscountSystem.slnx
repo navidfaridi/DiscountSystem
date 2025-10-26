@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DiscountSystem.Core/DiscountSystem.Core.csproj" />
+    <Project Path="src/DiscountSystem.Persistence.SqlServer/DiscountSystem.Persistence.SqlServer.csproj" Id="f2311e5d-6263-45ef-b85b-99680d0f5298" />
+    <Project Path="src/DiscountSystem.RedisCache/DiscountSystem.RedisCache.csproj" Id="4e0d61bc-0e30-4e51-8e93-f00ca381fd3b" />
+    <Project Path="src/DiscountSystem.Services/DiscountSystem.Services.csproj" />
+    <Project Path="src/DiscountSystem.Shared/DiscountSystem.Shared.csproj" Id="ce6692cf-296b-46a0-9721-aed7b0cfb55c" />
+  </Folder>
+  <Folder Name="/src/Clients/">
+    <Project Path="src/Clients/DiscountSystem.SignalRClient/DiscountSystem.SignalRClient.csproj" Id="41d7ebb9-df8a-4676-b507-6e0e35ff26e1" />
+  </Folder>
+  <Folder Name="/src/Servers/">
+    <Project Path="src/DiscountSystem.ApiServer/DiscountSystem.ApiServer.csproj" Id="28ea82c3-8399-4f00-9d92-4e2a3db3c828" />
+    <Project Path="src/DiscountSystem.SignalRServer/DiscountSystem.SignalRServer.csproj" Id="67953cd4-66cf-4a3a-9036-72387e2d5736" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DiscountSystem.UnitTests/DiscountSystem.UnitTests.csproj" />
+  </Folder>
+</Solution>
