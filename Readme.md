@@ -59,6 +59,7 @@ src/
  ├── DiscountSystem.Core/
  │   ├── Domain/
  │   ├── Application/
+ │   ├── Validators/
  │   └── Interfaces/
  │
  ├── DiscountSystem.Services/
@@ -74,10 +75,12 @@ src/
  │   ├── DiscountHub.cs
  │   └── Program.cs
  │
- ├── DiscountSystem.ApiServer/
- │   ├── Controllers/
- │   ├── Validators/
- │   └── Program.cs
+ ├── DiscountSystem.Shared/
+ │   └── ErrorMessages
+ │
+ ├── Clients/
+ │   └── DiscountSystem.SignalRClient/
+ │       └── Program.cs
  │
  └── tests/
      └── DiscountSystem.UnitTests/
