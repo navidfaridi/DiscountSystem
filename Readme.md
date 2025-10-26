@@ -41,7 +41,7 @@ The solution is composed of multiple layers for separation of concerns and testa
 
 ## 🧱 Technologies
 
-- **.NET 8**
+- **.NET 9**
 - **Entity Framework Core**
 - **SignalR**
 - **Redis (StackExchange.Redis)**
