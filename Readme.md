@@ -51,3 +51,90 @@ The solution is composed of multiple layers for separation of concerns and testa
 
 ---
 
+
+## 🗂️ Project Structure
+
+```
+src/
+ ├── DiscountSystem.Core/
+ │   ├── Domain/
+ │   ├── Application/
+ │   └── Interfaces/
+ │
+ ├── DiscountSystem.Services/
+ │   └── Services/
+ │
+ ├── DiscountSystem.Persistence.SqlServer/
+ │   └── EfDiscountCodeRepository.cs
+ │
+ ├── DiscountSystem.RedisCache/
+ │   └── RedisCacheService.cs
+ │
+ ├── DiscountSystem.SignalRServer/
+ │   ├── DiscountHub.cs
+ │   └── Program.cs
+ │
+ ├── DiscountSystem.ApiServer/
+ │   ├── Controllers/
+ │   ├── Validators/
+ │   └── Program.cs
+ │
+ └── tests/
+     └── DiscountSystem.UnitTests/
+```
+---
+
+## 🧩 How to Run
+
+1. **Start Redis Server** (default: `localhost:6379`).
+2. **Configure Connection Strings** in `appsettings.json`:
+   ```json
+   {
+     "ConnectionStrings": {
+       "Default": "Server=localhost;Database=DiscountDb;Trusted_Connection=True;",
+       "Redis": "localhost:6379"
+     }
+   }
+   ```
+3. **Run the SignalR Server**
+   ```bash
+   cd src/DiscountSystem.SignalRServer
+   dotnet run
+   ```
+4. **Run the Console Client** (optional)
+   ```bash
+   cd src/DiscountSystem.SignalRClient
+   dotnet run
+   ```
+   This client connects to the hub and allows interactive testing of `Generate` and `UseCode` methods.
+
+---
+
+## 🧪 Running Tests
+
+```bash
+cd tests/DiscountSystem.UnitTests
+dotnet test
+```
+
+All core logic and validation are covered by unit tests using **xUnit** and **Moq**.
+
+---
+
+## 📦 Future Improvements
+
+- Add **gRPC** or **REST endpoints** for alternative transport layers  
+- Introduce **rate limiting and monitoring** (e.g., Prometheus, OpenTelemetry)  
+- Implement **distributed transactions** for multi-node consistency  
+- Add **Docker Compose** for local setup (SQL Server + Redis)
+
+---
+
+## 👨‍💻 Author
+
+**Navid Faridi**  
+Senior .NET Developer  
+
+[https://linkedin.com/in/navidfaridi](linkedin profile)
+
+---
